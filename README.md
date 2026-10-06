@@ -1,28 +1,22 @@
-# Kinetic — Motion-led website
+# VOID/FORM — Advanced Motion Website
 
-A polished, responsive one-page website built around purposeful motion rather than decorative animation.
+A self-contained, motion-led portfolio/studio website built with HTML, CSS and native JavaScript.
 
 ## Motion design plan
 
-1. **Opening typography** — headline lines rise in with 115ms stagger, 1050ms duration, `cubic-bezier(.22,.8,.2,1)` easing. Purpose: establish tempo and make motion the first impression.
-2. **Scroll orientation** — fixed progress line plus compacting nav. Purpose: give the user continuous spatial feedback.
-3. **Reveal system** — sections enter on IntersectionObserver at ~16% visibility with 900ms easing. Purpose: preserve reading order and add rhythm.
-4. **Project motion** — gentle pointer tilt and scroll parallax on the large canvases. Purpose: make showcased work feel tactile without reducing legibility.
-5. **Kinetic project art** — independently animated orbital/grid/signal/type systems inside each project panel. Purpose: demonstrate multiple motion vocabularies.
-6. **Motion manifesto** — sticky statement subtly scrubs into place while the supporting principles pass beside it. Purpose: make the key positioning statement feel anchored.
-7. **Contact transition** — oversized type rises in when the CTA enters view; magnetic circular CTA adds a final tactile interaction.
-8. **Accessibility** — `prefers-reduced-motion` collapses animation and preserves all content/structure.
+1. **Hero entrance** — oversized typography rises in with staggered easing, paired with orbital micro-motion and a high-contrast accent.
+2. **Scroll choreography** — page progress, horizontal title drift, kinetic marquee and a long pinned narrative section.
+3. **Case-study motion** — interactive 3D tilt, internal parallax, animated equalizer, SVG path drawing and ambient floating forms.
+4. **Interaction states** — magnetic CTAs, animated nav underline, morphing menu icon and custom pointer feedback.
+5. **Accessibility** — `prefers-reduced-motion` disables continuous and transform-heavy animation.
+6. **Responsive behavior** — the layout, type scale and pinned sequence adapt for tablet and mobile.
 
-## Run locally
+## Files
 
-No build step is required.
+- `index.html` — page structure
+- `styles.css` — full visual system and responsive styles
+- `script.js` — animation, scroll, cursor and menu logic
 
-```bash
-python -m http.server 8000
-```
+## Run
 
-Then open `http://localhost:8000`.
-
-## Deploy
-
-This folder is ready for any static host such as Vercel, Netlify, GitHub Pages, Cloudflare Pages or a traditional web server.
+Open `index.html` directly in a modern browser. For the cleanest local testing, serve the folder with any static server.

@@ -1,230 +1,194 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#111111" />
-  <meta name="description" content="A motion-led digital design studio creating expressive websites with purposeful interaction." />
-  <title>Kinetic — Motion-led web design</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07080b" />
+  <title>VOID/FORM — Motion Design Studio</title>
+  <meta name="description" content="A complex motion-led creative studio website with scroll choreography, kinetic typography, interactive case studies, and custom transitions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor cursor-dot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Kinetic home">
-      <span class="brand-mark">K</span>
-      <span class="brand-name">KINETIC®</span>
+    <a class="brand magnetic" href="#top" aria-label="VOID/FORM home">
+      <span class="brand-mark">V/F</span>
+      <span class="brand-copy">VOID/FORM<br><em>motion studio</em></span>
     </a>
-    <nav aria-label="Primary navigation">
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#process" class="nav-link">Process</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="menu-pill magnetic">Start a project <span>↗</span></a>
+    <button class="menu-btn magnetic" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </header>
+
+  <aside class="menu-panel" aria-hidden="true">
+    <div class="menu-panel__inner">
+      <p class="eyebrow">Navigation</p>
+      <a href="#work">Selected work <span>01</span></a>
+      <a href="#approach">Approach <span>02</span></a>
+      <a href="#capabilities">Capabilities <span>03</span></a>
+      <a href="#contact">Start a project <span>04</span></a>
+      <div class="menu-meta"><span>Independent studio</span><span>Available worldwide</span></div>
+    </div>
+  </aside>
 
   <main id="top">
     <section class="hero section-pad">
-      <div class="hero-kicker reveal" data-reveal>
-        <span class="status-dot"></span>
-        Independent motion web studio
+      <div class="hero-grid">
+        <div class="hero-kicker reveal-up">
+          <span class="pulse-dot"></span>
+          <span>Digital motion direction / 2026</span>
+        </div>
+        <p class="hero-side reveal-up">We choreograph type, interface, and time into digital experiences that feel alive before they feel loud.</p>
       </div>
 
       <div class="hero-title-wrap">
-        <h1 class="hero-title" aria-label="Motion should feel designed">
-          <span class="line"><span class="word kinetic-word" data-text="MOTION">MOTION</span></span>
-          <span class="line"><span class="word outline-word">SHOULD FEEL</span></span>
-          <span class="line"><span class="word kinetic-word accent-word" data-text="DESIGNED.">DESIGNED.</span></span>
+        <h1 class="hero-title" aria-label="Motion without decoration">
+          <span class="hero-line" data-speed="0.07"><i>MOTION</i></span>
+          <span class="hero-line hero-line--offset" data-speed="-0.04"><i>WITHOUT</i></span>
+          <span class="hero-line hero-line--outline" data-speed="0.1"><i>DECORATION</i></span>
         </h1>
+        <div class="hero-orbit" aria-hidden="true">
+          <svg viewBox="0 0 260 260" role="presentation">
+            <defs><path id="circlePath" d="M130,130 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"/></defs>
+            <text><textPath href="#circlePath">SCROLL TO ENTER • MOTION IS THE SYSTEM • </textPath></text>
+          </svg>
+          <div class="hero-orbit__core">↘</div>
+        </div>
       </div>
 
-      <div class="hero-bottom reveal" data-reveal>
-        <p>
-          We build expressive websites where movement carries meaning — scroll systems, kinetic typography,
-          page transitions and interaction states crafted as part of the design, not layered on afterwards.
-        </p>
-        <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">
-          <span>Scroll to explore</span>
-          <i>↓</i>
-        </a>
-      </div>
-
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orbit-ring ring-a"></div>
-        <div class="orbit-ring ring-b"></div>
-        <div class="orbit-core">MOVE</div>
+      <div class="hero-bottom reveal-up">
+        <div class="micro-copy"><span>01</span><p>Identity motion<br>Product storytelling<br>Interaction systems</p></div>
+        <div class="micro-copy"><span>02</span><p>Code-first execution<br>Responsive choreography<br>Reduced-motion aware</p></div>
+        <a class="round-cta magnetic" href="#work"><span>View work</span><b>↘</b></a>
       </div>
     </section>
 
-    <section class="marquee" aria-label="Capabilities">
+    <section class="marquee-band" aria-label="Capabilities ticker">
       <div class="marquee-track">
-        <span>SCROLL SYSTEMS</span><i>✦</i><span>KINETIC TYPE</span><i>✦</i><span>PAGE TRANSITIONS</span><i>✦</i><span>MICRO-INTERACTIONS</span><i>✦</i><span>AI-DIRECTED BUILD</span><i>✦</i>
-        <span>SCROLL SYSTEMS</span><i>✦</i><span>KINETIC TYPE</span><i>✦</i><span>PAGE TRANSITIONS</span><i>✦</i><span>MICRO-INTERACTIONS</span><i>✦</i><span>AI-DIRECTED BUILD</span><i>✦</i>
+        <span>SCROLL SYSTEMS</span><b>✦</b><span>KINETIC TYPE</span><b>✦</b><span>INTERACTION DESIGN</span><b>✦</b><span>WEBGL THINKING</span><b>✦</b><span>MOTION DIRECTION</span><b>✦</b>
+        <span>SCROLL SYSTEMS</span><b>✦</b><span>KINETIC TYPE</span><b>✦</b><span>INTERACTION DESIGN</span><b>✦</b><span>WEBGL THINKING</span><b>✦</b><span>MOTION DIRECTION</span><b>✦</b>
       </div>
     </section>
 
     <section id="work" class="work section-pad">
-      <div class="section-head reveal" data-reveal>
-        <div>
-          <span class="eyebrow">01 / Selected motion systems</span>
-          <h2>Movement with<br/>a reason.</h2>
+      <div class="section-head reveal-up">
+        <p class="eyebrow">Selected experiments / 01</p>
+        <h2>Motion with a reason.</h2>
+        <p>Every sequence has a job: direct attention, clarify hierarchy, create anticipation, or make the interface easier to understand.</p>
+      </div>
+
+      <article class="project project--a reveal-card" data-index="01">
+        <div class="project-copy">
+          <div class="project-meta"><span>01 / VANTA</span><span>Digital fashion system</span></div>
+          <h3>Interfaces that behave like fabric.</h3>
+          <p>Elastic grids, inertial titles, and layered product reveals turn a catalogue into a tactile editorial experience.</p>
+          <a href="#contact" class="text-link">Explore case study <span>↗</span></a>
         </div>
-        <p>Every interaction has a job: orient, focus, reveal, reward, or carry the story forward.</p>
-      </div>
+        <div class="project-visual project-visual--a interactive-visual">
+          <div class="orb orb--one"></div><div class="orb orb--two"></div>
+          <div class="glass-card glass-card--1"><span>VANTA / 001</span><b>FORM<br>FOLLOWS<br>FEELING</b></div>
+          <div class="glass-card glass-card--2"><span>COLLECTION</span><strong>SS/26</strong></div>
+          <svg class="scribble" viewBox="0 0 600 500" preserveAspectRatio="none"><path d="M54 420 C160 210, 260 520, 390 210 S560 120, 548 64"/></svg>
+        </div>
+      </article>
 
-      <div class="project-stack">
-        <article class="project-card" data-tilt>
-          <div class="project-meta">
-            <span>Editorial / Launch</span><span>2026</span>
+      <article class="project project--b reveal-card" data-index="02">
+        <div class="project-copy">
+          <div class="project-meta"><span>02 / SIGNAL</span><span>Spatial sound platform</span></div>
+          <h3>Audio visualised as spatial rhythm.</h3>
+          <p>Reactive bars, tempo-based state changes and scroll-synced waveforms create a UI that feels composed rather than animated.</p>
+          <a href="#contact" class="text-link">Explore case study <span>↗</span></a>
+        </div>
+        <div class="project-visual project-visual--b interactive-visual">
+          <div class="signal-title">SIGNAL</div>
+          <div class="equalizer" aria-hidden="true">
+            <i style="--h:42%"></i><i style="--h:80%"></i><i style="--h:56%"></i><i style="--h:94%"></i><i style="--h:70%"></i><i style="--h:36%"></i><i style="--h:64%"></i><i style="--h:88%"></i><i style="--h:48%"></i><i style="--h:76%"></i><i style="--h:52%"></i><i style="--h:96%"></i><i style="--h:66%"></i><i style="--h:34%"></i><i style="--h:72%"></i><i style="--h:84%"></i>
           </div>
-          <div class="project-visual visual-one">
-            <div class="visual-grid"></div>
-            <div class="floating-copy copy-a">THE<br/>NEXT<br/>FRAME</div>
-            <div class="floating-copy copy-b">01</div>
-            <div class="floating-disc"></div>
-          </div>
-          <div class="project-info">
-            <h3>Frame Theory</h3>
-            <p>Scroll-locked editorial story with modular typography and a cinematic reveal rhythm.</p>
-            <button class="text-link magnetic">View motion notes <span>↗</span></button>
-          </div>
-        </article>
+          <div class="signal-ui"><span>LIVE SIGNAL</span><span>128 BPM</span><span>03:41</span></div>
+        </div>
+      </article>
 
-        <article class="project-card" data-tilt>
-          <div class="project-meta">
-            <span>Product / Interface</span><span>2026</span>
-          </div>
-          <div class="project-visual visual-two">
-            <div class="signal signal-a"></div>
-            <div class="signal signal-b"></div>
-            <div class="signal signal-c"></div>
-            <div class="signal-label">SYSTEM<br/>IN MOTION</div>
-            <div class="signal-index">02 / 04</div>
-          </div>
-          <div class="project-info">
-            <h3>Pulse Interface</h3>
-            <p>State transitions, directional feedback and layered hover behaviour for an AI product.</p>
-            <button class="text-link magnetic">View interaction system <span>↗</span></button>
-          </div>
-        </article>
-
-        <article class="project-card" data-tilt>
-          <div class="project-meta">
-            <span>Brand / Experience</span><span>2026</span>
-          </div>
-          <div class="project-visual visual-three">
-            <div class="type-cloud">
-              <span>MOVE</span><span>BUILD</span><span>FEEL</span><span>EDIT</span><span>SHIP</span>
-            </div>
-            <div class="counter">03</div>
-          </div>
-          <div class="project-info">
-            <h3>Velocity Objects</h3>
-            <p>A playful identity system translated into kinetic type, elastic navigation and tactile page motion.</p>
-            <button class="text-link magnetic">View design system <span>↗</span></button>
-          </div>
-        </article>
-      </div>
+      <article class="project project--c reveal-card" data-index="03">
+        <div class="project-copy">
+          <div class="project-meta"><span>03 / MONUMENT</span><span>Architecture archive</span></div>
+          <h3>Navigation as a changing point of view.</h3>
+          <p>A modular archive where depth, scale and framing guide visitors through projects like moving around a physical structure.</p>
+          <a href="#contact" class="text-link">Explore case study <span>↗</span></a>
+        </div>
+        <div class="project-visual project-visual--c interactive-visual">
+          <div class="arch-grid" aria-hidden="true"></div>
+          <div class="arch-block b1"></div><div class="arch-block b2"></div><div class="arch-block b3"></div><div class="arch-block b4"></div>
+          <div class="arch-caption"><span>MONUMENT</span><small>Archive 1994—2026</small></div>
+        </div>
+      </article>
     </section>
 
-    <section id="process" class="process section-pad">
-      <div class="section-head reveal" data-reveal>
-        <div>
-          <span class="eyebrow">02 / Process</span>
-          <h2>Plan the motion.<br/>Then build it.</h2>
+    <section id="approach" class="sequence">
+      <div class="sequence-sticky">
+        <div class="sequence-copy">
+          <p class="eyebrow">Approach / 02</p>
+          <h2>Design the <span class="sequence-word">timing</span>, not just the screen.</h2>
+          <p class="sequence-body">We map the user’s attention across time: what appears first, what waits, what accelerates, and what should remain still.</p>
         </div>
-        <p>Motion is specified before it is coded: timing, easing, sequence, trigger and purpose.</p>
-      </div>
-
-      <div class="process-grid">
-        <article class="process-item reveal" data-reveal>
-          <span class="step-no">01</span>
-          <h3>Direction</h3>
-          <p>Define visual language, pacing and the handful of motion moments that will make the site memorable.</p>
-          <div class="spec"><span>PACE</span><strong>Measured → expressive</strong></div>
-        </article>
-        <article class="process-item reveal" data-reveal>
-          <span class="step-no">02</span>
-          <h3>Motion map</h3>
-          <p>Write precise specs for reveals, scroll triggers, page states, easing curves and transition hierarchy.</p>
-          <div class="spec"><span>EASE</span><strong>cubic-bezier(.22,.8,.2,1)</strong></div>
-        </article>
-        <article class="process-item reveal" data-reveal>
-          <span class="step-no">03</span>
-          <h3>Build + direct</h3>
-          <p>Translate the system into code, guiding an AI coding agent with exact behavioural requirements.</p>
-          <div class="spec"><span>STAGGER</span><strong>60–90ms</strong></div>
-        </article>
-        <article class="process-item reveal" data-reveal>
-          <span class="step-no">04</span>
-          <h3>QA + tune</h3>
-          <p>Refine typography, contrast, performance and motion until the experience feels intentional at every breakpoint.</p>
-          <div class="spec"><span>GOAL</span><strong>Client-ready finish</strong></div>
-        </article>
+        <div class="sequence-stage" aria-hidden="true">
+          <div class="stage-ring ring-a"></div><div class="stage-ring ring-b"></div><div class="stage-ring ring-c"></div>
+          <div class="stage-number">01</div>
+          <div class="stage-line"></div>
+          <div class="stage-label">STRUCTURE</div>
+        </div>
       </div>
     </section>
 
     <section class="principles section-pad">
-      <div class="principle-copy">
-        <span class="eyebrow">03 / Principles</span>
-        <h2 class="big-statement" data-scrub>
-          MOTION ISN'T<br/>
-          <span>DECORATION.</span><br/>
-          IT'S DIRECTION.
-        </h2>
+      <div class="principle reveal-up"><span>01</span><h3>Hierarchy before effect</h3><p>Motion reinforces layout and importance. If an animation obscures hierarchy, it gets removed.</p></div>
+      <div class="principle reveal-up"><span>02</span><h3>Tempo before spectacle</h3><p>Fast is not exciting by default. We use pacing, pauses and contrast to create intention.</p></div>
+      <div class="principle reveal-up"><span>03</span><h3>Feedback before flourish</h3><p>Interaction states communicate what just happened and what can happen next.</p></div>
+    </section>
+
+    <section id="capabilities" class="capabilities section-pad">
+      <div class="section-head section-head--tight reveal-up">
+        <p class="eyebrow">Capabilities / 03</p>
+        <h2>A motion system from first frame to final build.</h2>
       </div>
-      <div class="principle-list">
-        <div class="principle-row reveal" data-reveal><span>01</span><p>Movement should clarify hierarchy before it adds spectacle.</p></div>
-        <div class="principle-row reveal" data-reveal><span>02</span><p>Scroll choreography should reward attention, not fight it.</p></div>
-        <div class="principle-row reveal" data-reveal><span>03</span><p>Micro-interactions should make state changes instantly legible.</p></div>
-        <div class="principle-row reveal" data-reveal><span>04</span><p>Reduced-motion users deserve an equally considered experience.</p></div>
+      <div class="cap-grid">
+        <div class="cap-item reveal-up"><span>01</span><h3>Creative direction</h3><p>Motion concept, references, pacing, visual rhythm and sequence planning.</p></div>
+        <div class="cap-item reveal-up"><span>02</span><h3>Interaction design</h3><p>Micro-interactions, navigation, cursor behavior, states and spatial transitions.</p></div>
+        <div class="cap-item reveal-up"><span>03</span><h3>Scroll choreography</h3><p>Sticky storytelling, parallax systems, reveals and scroll-progress transformations.</p></div>
+        <div class="cap-item reveal-up"><span>04</span><h3>Design engineering</h3><p>Production-ready HTML/CSS/JS with responsive and accessibility considerations.</p></div>
       </div>
     </section>
 
-    <section class="tool-belt section-pad">
-      <span class="eyebrow reveal" data-reveal>04 / Flexible workflow</span>
-      <div class="tool-cloud reveal" data-reveal>
-        <span>After Effects</span>
-        <span>Framer</span>
-        <span>Jitter</span>
-        <span>Rive</span>
-        <span>Lottie</span>
-        <span>Codex</span>
-        <span>Cursor</span>
-        <span>Claude Code</span>
+    <section class="kinetic-quote">
+      <div class="kinetic-track" aria-hidden="true">
+        <span>LESS MOTION. BETTER MOTION. LESS MOTION. BETTER MOTION.</span>
       </div>
-      <p class="tool-note reveal" data-reveal>
-        Prototype motion in the right tool for the idea, then reproduce the feeling faithfully in the browser.
-      </p>
+      <div class="kinetic-center reveal-up"><p>Movement should feel inevitable.</p></div>
     </section>
 
     <section id="contact" class="contact section-pad">
-      <div class="contact-orb" aria-hidden="true"></div>
-      <span class="eyebrow reveal" data-reveal>05 / New business</span>
-      <h2 class="contact-title">
-        <span class="line"><span>MAKE IT</span></span>
-        <span class="line"><span>MOVE.</span></span>
-      </h2>
-      <div class="contact-bottom reveal" data-reveal>
-        <p>Have a product, brand, launch or idea that should feel more alive?</p>
-        <a class="contact-button magnetic" href="mailto:hello@kinetic.studio">
-          <span>Start a project</span><i>↗</i>
-        </a>
+      <div class="contact-top reveal-up">
+        <p class="eyebrow">Start a project / 04</p>
+        <p>Have a launch, portfolio, product or brand that needs more than a static page?</p>
+      </div>
+      <a href="mailto:hello@voidform.studio" class="contact-link magnetic" data-cursor="open">
+        <span>LET’S MAKE IT</span><span>MOVE.</span><i>↗</i>
+      </a>
+      <div class="contact-footer">
+        <span>VOID/FORM © 2026</span><span>Alexandria / Worldwide</span><span>Built with native web motion</span>
       </div>
     </section>
   </main>
-
-  <footer class="footer section-pad">
-    <div>KINETIC® / MOTION WEB STUDIO</div>
-    <div>DESIGN + DIRECTION + BUILD</div>
-    <div><span id="year"></span> — ALL SYSTEMS MOVING</div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
